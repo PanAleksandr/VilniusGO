@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vilnius Go — Settings</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <a href="index.html"><img src="img/VG1.png" alt="Vilnius Go logo" class="logo" /></a>
+      <span>Vilnius Go</span>
+    </div>
+    <nav class="menu" aria-label="Main menu">
+      <a href="index.html">Home</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="about.html">About</a>
+      <a href="register.html">Register</a>
+      <a href="contact.html">Contact</a>
+      <a class="active" href="settings.html">Settings</a>
+      <label class="switch" title="Toggle theme">
+        <input id="themeToggle" type="checkbox" aria-label="Light theme" />
+        <span>Light theme</span>
+      </label>
+    </nav>
+    <a href="about.html" class="btn primary">About</a>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h1 class="hero-title">Settings</h1>
+    <div class="content two">
+      <article class="card">
+        <h3>Theme</h3>
+        <p>Toggle the theme using the switch in the menu (no JavaScript).</p>
+        <p class="muted">Using <code>:has()</code> and CSS variables.</p>
+      </article>
+      <aside class="card">
+        <h3>Privacy</h3>
+        <p>GPS data is stored locally and uploaded only with your consent.</p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2025 Vilnius Go.</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vilnius Go — Register</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <a href="index.html"><img src="img/VG1.png" alt="Vilnius Go logo" class="logo" /></a>
+      <span>Vilnius Go</span>
+    </div>
+    <nav class="menu" aria-label="Main menu">
+      <a href="index.html">Home</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="about.html">About</a>
+      <a class="active" href="register.html">Register</a>
+      <a href="contact.html">Contact</a>
+      <a href="settings.html">Settings</a>
+      <label class="switch" title="Toggle theme">
+        <input id="themeToggle" type="checkbox" aria-label="Light theme" />
+        <span>Light theme</span>
+      </label>
+    </nav>
+    <a href="about.html" class="btn primary">About</a>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h1 class="hero-title">Register — sign up</h1>
+
+    <div class="content single">
+      <form class="card form" aria-labelledby="register-title">
+        <h3 id="register-title">Create your account</h3>
+
+        <div class="form-group grid-2">
+          <label class="field">
+            <span class="label">Full name</span>
+            <input type="text" name="name" placeholder="John Doe" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span class="label">Email</span>
+            <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </label>
+        </div>
+
+        <div class="form-group grid-2">
+          <label class="field">
+            <span class="label">Phone</span>
+            <input type="tel" name="tel" placeholder="+370 6xx xxxx" autocomplete="tel">
+          </label>
+          <label class="field">
+            <span class="label">Age</span>
+            <input type="number" name="age" min="7" max="90" placeholder="18">
+          </label>
+        </div>
+
+        <!-- Start date (left) + About you (right) -->
+        <div class="form-group grid-2">
+          <label class="field">
+            <span class="label">Start date</span>
+            <input type="date" name="start">
+          </label>
+
+          <label class="field">
+            <span class="label">About you</span>
+            <!-- фиксированный размер + лимит символов (примерно под 100 слов) -->
+            <textarea
+              class="no-resize"
+              name="about"
+              rows="4"
+              maxlength="700"
+              placeholder="What's your running goal this season?"
+              aria-describedby="about-help"
+            ></textarea>
+            <small id="about-help" class="muted">Up to ~100 words (max 700 characters).</small>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="field">
+            <span class="label">Profile photo</span>
+            <input type="file" name="avatar" accept="image/*">
+          </label>
+        </div>
+
+        <div class="form-group choice">
+          <label><input type="checkbox" name="terms" required> I agree to the Terms</label>
+        </div>
+
+        <div class="cta">
+          <button class="btn primary" type="submit">Create account</button>
+          <button class="btn" type="reset">Clear</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2025 Vilnius Go.</div>
+</footer>
+</body>
+</html>

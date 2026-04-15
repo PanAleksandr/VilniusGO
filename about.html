@@ -1,71 +1,162 @@
-<!doctype html>
-<html lang="en">
+<!doctype html> 
+<html lang="en"> 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vilnius Go — About</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>Vilnius Go — About</title> 
+  <link rel="stylesheet" href="css/style.css" /> 
+  <meta name="description" content="Vilnius Go: how the game works, teams and districts, scoring, seasons, and how to join." />
 </head>
-<body>
+<body> 
 <header>
-  <div class="container nav">
+  <div class="container nav"> 
     <div class="brand">
       <a href="index.html"><img src="img/VG1.png" alt="Vilnius Go logo" class="logo" /></a>
-      <span>Vilnius Go</span>
+      <span id="main-title">Vilnius Go</span>
     </div>
-    <nav class="menu" aria-label="Main menu">
-      <a href="index.html">Home</a>
-      <a href="leaderboard.html">Leaderboard</a>
-      <a class="active" href="about.html">About</a>
-      <a href="register.html">Register</a>
-      <a href="contact.html">Contact</a>
-      <a href="settings.html">Settings</a>
-      <label class="switch" title="Toggle theme">
-        <input id="themeToggle" type="checkbox" aria-label="Light theme" />
-        <span>Light theme</span>
-      </label>
+
+    <!-- 1) Checkbox (paslėptas, naudojamas atidaryti/uždaryti meniu) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+    <!-- 2) Hamburger (buterbrodas) -->
+    <label for="nav-toggle" class="nav-burger" aria-label="Open menu">
+      <span></span>
+    </label>
+
+    <nav class="menu" aria-label="Main menu"> 
+      <a href="index.html">Home</a> 
+      <a href="leaderboard.html">Leaderboard</a> 
+      <a class="active" href="about.html" aria-current="page">About</a>
+      <a href="register.html">Register</a> 
+      <a href="contact.html">Contact</a> 
+      <a href="settings.html">Settings</a> 
     </nav>
-    <a href="register.html" class="btn primary">Register</a>
+
+    <a href="#" class="btn primary" aria-disabled="true" onclick="return false;">Login</a> 
   </div>
 </header>
 
-<main class="container">
-  <section class="section">
-    <h1 class="hero-title">About the game</h1>
+<main> 
+  <!-- Hero -->
+  <section class="container hero hero-center"> 
+    <h1 class="hero-title" id="hero-title">About the Game</h1> 
+    <p class="lead">Vilnius Go is a city-wide fitness game that turns walking and running into friendly team competition across districts.</p> 
+  </section>
 
-    <div class="content two">
-      <!-- Main: What & How -->
+  <!-- Contents + Main -->
+  <section class="container"> 
+    <div class="content"> 
+      
+      <div class="card">
+        <h3 >Contents</h3> 
+        <ul class="list" style="margin-top:8px">
+          <li><a class="link-inherit" href="#what">What is Vilnius Go</a></li>
+          <li><a class="link-inherit" href="#how">How It Works</a></li>
+          <li><a class="link-inherit" href="#teams">Teams & Districts</a></li>
+          <li><a class="link-inherit" href="#scoring">Scoring System</a></li>
+          <li><a class="link-inherit" href="#season">Seasons & Leaderboard</a></li>
+          <li><a class="link-inherit" href="#join">How to Join</a></li>
+          <li><a class="link-inherit" href="#fairplay">Fair Play & Safety</a></li>
+          <li><a class="link-inherit" href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Main text -->
       <article class="card">
-        <h3>What is Vilnius Go? 🎮🏃</h3>
-        <p><strong>Run to take over the city.</strong> Complete loops around real blocks to claim areas and climb the leaderboard.</p>
+        <h2 id="what">What is Vilnius Go</h2>
+        <p><strong>Vilnius Go</strong> is an open, city-scale movement challenge. You move — run, jog, or power walk — log your distance, and earn points for your <strong>team</strong> and <strong>district</strong>. The goal is simple: stay active, discover the city, and climb the leaderboard together.</p>
+        <p>No special gear is required: any tracker or app is fine. What matters is consistency, safety, and fair play.</p>
 
-        <h3>Play your way ⚡</h3>
-        <ul class="list">
-          <li><strong>Solo:</strong> go alone and capture at your own pace.</li>
-          <li><strong>Team:</strong> join a crew, stack captures, defend together.</li>
+        <h2 id="how">How It Works</h2>
+        <ul> 
+          <li><strong>Create or join a team</strong> when you register.</li>
+          <li><strong>Move regularly</strong>: runs, jogs, power walks — any outdoor distance-based activity.</li>
+          <li><strong>Log each session</strong> in your profile; points are calculated automatically.</li>
+          <li><strong>Help your team & district</strong>: all your points contribute to both rankings.</li>
         </ul>
 
-        <div class="highlight">
-          ⏱️ <strong>1-Hour Window:</strong> once you start moving, you have <strong>1 hour</strong> to complete a capture (finish your loop and secure the fragment).
+        <p class="highlight">
+          <strong>Tip:</strong> short sessions still count. Aim for 3+ activities per week to unlock the weekly bonus.
+        </p>
+
+        <h2 id="teams">Teams & Districts</h2> 
+        <p>Teams can be friends, classmates, or colleagues — any motivated group. Each team represents a <strong>district</strong> of Vilnius, adding extra local rivalry on top of the team race.</p>
+        <ul>
+          <li><strong>Team size:</strong> up to ~10 active members is recommended for easy coordination.</li> 
+          <li><strong>District selection:</strong> choose once per season; changes mid-season require admin approval to keep competition fair.</li> 
+        </ul>
+
+        <h2 id="scoring">Scoring System</h2> 
+        <p>Points are based on distance, frequency, and consistency. Basic rules:</p>
+        <div class="highlight"> 
+          <ul>
+            <li>Every <strong>1 km = 1 point</strong>.</li>
+            <li><strong>Weekly bonus:</strong> +5 points for <strong>3+</strong> activities on different days.</li>
+            <li><strong>Consistency streak:</strong> 4 consecutive weeks = <strong>+10</strong> extra points.</li>
+            <li><strong>Per-session cap:</strong> max <strong>20</strong> points, to avoid unhealthy single-day marathons.</li>
+          </ul>
         </div>
-      </article>
+          
+        <h3>Example Weekly Score</h3> 
+        <table aria-label="Example scoring breakdown">
+          <thead>
+            <tr>
+              <th>Session</th>
+              <th>Distance</th>
+              <th>Days</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Mon – easy run</td><td>4 km</td><td>1</td><td>4</td></tr>
+            <tr><td>Wed – power walk</td><td>3 km</td><td>2</td><td>3</td></tr>
+            <tr><td>Sat – cross training</td><td>6 km</td><td>3</td><td>6</td></tr>
+            <tr><td colspan="3"><em>Weekly bonus</em></td><td><strong>+5</strong></td></tr>
+            <tr><td colspan="3"><strong>Total per week</strong></td><td><strong>18</strong></td></tr>
+          </tbody>
+        </table>
 
-      <!-- Compact extras -->
-      <aside class="card">
-        <h3>Quick start 💡</h3>
-        <ul class="list">
-          <li>Start tracking → run a full loop.</li>
-          <li>Short blocks = faster captures.</li>
-          <li>Re-run to defend your areas.</li>
+        <h2 id="season">Seasons & Leaderboard</h2>
+        <p>The game runs in <strong>seasons</strong> (typically 8–12 weeks). During a season, points accumulate for both teams and districts. The <a class="link-inherit" href="leaderboard.html">Leaderboard</a> shows:</p>
+        <ul>
+          <li><strong>#</strong> — position</li>
+          <li><strong>Team</strong> — team name</li>
+          <li><strong>District</strong> — represented area of Vilnius</li>
+          <li><strong>Points</strong> — total score for the season</li>
         </ul>
-        <p class="muted">Play fair, stay aware. GPS syncs later.</p>
-      </aside>
+        <p>When a season ends, stats reset — keeping competition fresh and giving new teams a chance to break into the top.</p>
+
+        <h2 id="join">How to Join</h2>
+        <ol>
+          <li>Open the <a class="link-inherit" href="register.html">Register</a> page and create your account.</li>
+          <li>Pick (or create) a team and select your district.</li>
+          <li>Start logging activities — the more consistent you are, the faster your progress.</li>
+        </ol>
+
+        <h2 id="fairplay">Fair Play & Safety</h2>
+        <ul>
+          <li><strong>Safety first:</strong> log only real activities, done without health risks.</li>
+          <li><strong>Honesty:</strong> no fake distances or boosting. Admins may review suspicious entries.</li>
+          <li><strong>Respect the city:</strong> follow traffic rules, use sidewalks/paths, and keep Vilnius clean.</li>
+        </ul>
+
+        <h2 id="faq">FAQ</h2>
+        <p><strong>Can I change teams?</strong> — Yes, between seasons. During a season — on request, to keep balance.</p>
+        <p><strong>What devices can I use?</strong> — Any app or tracker that measures distance (phone or watch).</p>
+        <p><strong>If I skip a week?</strong> — No problem. Your streak resets, but you still earn points for new sessions.</p>
+      </article>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="container">© 2025 Vilnius Go.</div>
+  <div class="container">© <span id="year"></span> Vilnius Go.</div>
 </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="js/settings.js"></script>
+
 </body>
 </html>

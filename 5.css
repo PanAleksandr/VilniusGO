@@ -1,0 +1,448 @@
+/* ============== 1. Base ============== */
+*{
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+}
+html{
+  scroll-behavior: smooth;
+}
+:root{
+  --bg:#0b1220;
+  --bg-2:#030e29;
+  --card:#111a2e;
+  --text:#f3e6e6;
+  --muted:#9db0c6;
+  --stroke:#1b2740;
+  --brand:#89948d;
+  --accent:#ffd166;
+  --fs-1: 2.4rem;
+  --radius: 16px;
+}
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg-2);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+/* paveldėjimas: a paveldi spalvą iš body arba tėvo */
+a{
+  color: inherit;    /* jei убрать inherit, ссылки станут синими по умолчанию */
+  text-decoration: none;
+}
+
+/* ============== 2. Layout ============== */
+.container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px 16px;
+}
+main{
+  flex: 1 0 auto;
+}
+footer{
+  margin-top: auto;
+}
+
+/* įpėdinis: visi p, kurie yra .content viduje */
+.content{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.content p{
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ============ 3. Header / Footer / Nav ============ */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--stroke);
+}
+footer{
+  padding: 12px 0;
+  color: var(--muted);
+  border-top: 1px solid var(--stroke);
+  font-size: .85rem;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+}
+.logo{
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: block;
+}
+
+/* ID pavyzdys */
+#main-title{
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  opacity: .9;
+}
+
+.menu{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.menu a{
+  padding: 6px 10px;
+  border-radius: 12px;
+  color: var(--muted);
+  border: 1px solid transparent;
+  font-size: .9rem;
+}
+.menu a:hover,
+.menu a.active{
+  color: var(--text);
+  border-color: var(--stroke);
+  background: #0f1a30;
+}
+
+/* ============ 4. Buttons / Links ============ */
+.btn{
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--stroke);
+  background: #0f1a30;
+  color: var(--text);
+  font-weight: 700;
+  font-size: .9rem;
+}
+.btn.primary{
+  background: var(--brand);
+  color: #081224;
+  border: none;
+}
+.btn:focus-visible,
+.menu a:focus-visible{
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 12px;
+}
+
+/* paveldėjimas + hover */
+.link-inherit{
+  color: inherit;
+  border-bottom: 1px dashed transparent;
+}
+.link-inherit:hover{
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+/* ============ 5. Typography ============ */
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 0;
+}
+.hero-center{
+  text-align: center;
+}
+.hero-title{
+  font-size: var(--fs-1);
+  line-height: 1.1;
+  font-weight: 900;
+  margin: 0 0 16px;
+}
+#hero-title{
+  letter-spacing: -.02em;
+}
+.lead{
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 4px 0 8px;
+}
+p{
+  margin: 0 0 8px;
+}
+
+/* ============ 6. Cards / Lists / Tables / Highlight ============ */
+.card{
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 16px;
+  color: #dbe4ff;
+}
+.card.light{
+  background: #fff;
+  color: #0b0d12;
+  border: 1px solid #e7ecf3;
+}
+.card--click{
+  display: block;
+}
+
+/* list */
+.list{
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+}
+/* įpėdinis: visi li esantys .list viduje */
+.list li{
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* table */
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td{
+  padding: 8px;
+  border: 1px solid var(--stroke);
+  text-align: left;
+}
+th{
+  background: #0f1a30;
+}
+
+/* !important pavyzdys */
+p.highlight{
+  color: #22c55e;
+}
+.highlight{
+  border: 1px dashed var(--accent);
+  background: rgba(51,225,169,.10);
+  color: #eafff6 !important; /* !important nugali p.highlight */
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* ============ 7. Forms ============ */
+form{
+  display: grid;
+  gap: 10px;
+}
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 760px){
+  .grid-2{
+    grid-template-columns: 1fr;
+  }
+}
+.form h3{
+  font-size: 1.1rem;
+}
+.form label{
+  font-size: .95rem;
+}
+
+/* įpėdinis: visi input/select/textarea formoje */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="date"],
+form input[type="color"],
+form input[type="file"],
+form select,
+form textarea{
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--stroke);
+  background: #0d172b;
+  color: var(--text);
+  font: inherit;
+  font-size: .95rem;
+}
+textarea{
+  min-height: 80px;
+}
+
+/* ============ 8. Images (QR, stores, phone, friends) ============ */
+.qr{
+  width: 140px;
+  height: 140px;
+  display: block;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.stores{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.badge-store{
+  display: inline-block;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  background: #000;
+}
+.badge-store img{
+  height: 36px;
+  display: block;
+  border-radius: 12px;
+}
+
+/* hero white chevron — можно сказать „paprastas dekoras“ */
+.hero-band{
+  position: relative;
+}
+.hero-band::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 120vw;
+  height: 220px;
+  transform: translateX(-50%);
+  background: #fff;
+  clip-path: polygon(0 55%, 50% 100%, 100% 55%, 100% 100%, 0 100%);
+  border-top: 1px solid var(--stroke);
+  z-index: -1;
+}
+
+/* phone strip */
+.phone-band{
+  background: #fff;
+  color: #111;
+  padding-bottom: 24px;
+}
+.phone-strip{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0 24px;
+  flex-wrap: wrap;
+}
+.strip-img{
+  display: block;
+  max-width: 160px;
+}
+.phone-center{
+  width: 240px;
+  max-width: 70vw;
+}
+.phone-center img{
+  width: 100%;
+  height: auto;
+}
+
+/* friends */
+.friends-band{
+  margin-top: 24px;
+}
+.friends-band .container{
+  background: #0b1220;
+  border-radius: 24px;
+  text-align: center;
+}
+.friends-band h2{
+  margin-top: 0;
+}
+.friends-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  justify-items: center;
+}
+.friend-card{
+  background: #0001;
+  border: 1px solid #ffffff30;
+  border-radius: 16px;
+  overflow: hidden;
+  width: min(240px, 100%);
+}
+.friend-card img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.friend-card figcaption{
+  padding: 6px 8px;
+  font-size: .8rem;
+  background: linear-gradient(180deg, #0000, #0003);
+  color: #fff;
+}
+@media (min-width: 768px){
+  .friends-grid{
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+}
+
+/* extra section before footer */
+.extra-band{
+  padding: 24px 0;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+.extra-band .container{
+  text-align: center;
+}
+
+/* ============ 9. Gallery (kitų psl. ) ============ */
+.cities{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+.city.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px;
+}
+.city .art{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.city.card h4{
+  margin: 4px 0 2px;
+  font-size: .95rem;
+}
+.city.card .muted{
+  margin: 0;
+  color: var(--muted);
+}
+
+/* ============ 10. Small screens ============ */
+@media (max-width: 560px){
+  .container{
+    padding: 12px;
+  }
+}

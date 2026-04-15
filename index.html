@@ -3,149 +3,165 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vilnius Go — Home</title>
-  <meta name="description" content="Vilnius Go — a running game where you conquer city zones. Download and try it!" />
+
+  <title>VilniusGO - Outdoor City Game in Vilnius</title>
+
+  <meta name="description" content="VilniusGO is an outdoor city game in Vilnius where players walk, claim streets, build teams and compete on the leaderboard." />
+  <meta name="keywords" content="VilniusGO, Vilnius game, outdoor game, city game, walking app, leaderboard, team game" />
+  <meta name="author" content="Aleksandr" />
+
+  <link rel="canonical" href="https://panaleksandr.github.io/VilniusGO/index.html" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="VilniusGO - Outdoor City Game in Vilnius" />
+  <meta property="og:description" content="Walk, claim streets and build your team in VilniusGO." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://panaleksandr.github.io/VilniusGO/index.html" />
+  <meta property="og:image" content="https://panaleksandr.github.io/VilniusGO/img/VG1.png" />
 </head>
+
 <body>
-  <!-- ============ HEADER ============ -->
   <header>
     <div class="container nav">
       <div class="brand">
-        <a href="index.html"><img src="img/VG1.png" alt="Vilnius Go logo" class="logo" /></a>
-        <span>Vilnius Go</span>
+        <a href="index.html">
+          <img src="img/VG1.png" alt="VilniusGO logo" class="logo" />
+        </a>
+        <span id="main-title">Vilnius Go</span>
       </div>
 
-      <nav class="menu" aria-label="Main menu">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+      <label for="nav-toggle" class="nav-burger" aria-label="Open menu">
+        <span></span>
+      </label>
+
+      <nav class="menu">
         <a class="active" href="index.html">Home</a>
         <a href="leaderboard.html">Leaderboard</a>
         <a href="about.html">About</a>
         <a href="register.html">Register</a>
         <a href="contact.html">Contact</a>
         <a href="settings.html">Settings</a>
-
-        <label class="switch" title="Toggle theme">
-          <input id="themeToggle" type="checkbox" />
-          <span>Light theme</span>
-        </label>
       </nav>
 
-      <!-- CTA -->
-      <a href="settings.html" class="btn primary">Login</a>
+      <a href="#" class="btn primary">Login</a>
     </div>
   </header>
 
-  <!-- ========= HERO (dark) ========= -->
+  <!-- HERO -->
   <section class="hero-band">
     <div class="container hero hero-center">
-      <div>
-        <h1 id="hero-title" class="hero-title">Your city is waiting!</h1>
-        <h2>Get outside, claim your streets, build your team and be first on the map.</h2>
+      <h1 id="hero-title">VilniusGO Outdoor City Game in Vilnius</h1>
 
-        <div class="cta">
-          <!-- QR -->
-          <img class="qr" src="img/QR1.png" alt="QR code to open/download Vilnius Go" />
+      <p class="hero-subtitle">
+        Claim streets, build your team and climb the leaderboard by walking through the city.
+      </p>
 
-          <!-- Store badges (one line) -->
-          <div class="stores">
-            <a href="#" class="badge-store" aria-label="Download on the App Store">
-              <img src="img/Download_on_the_App_Store_Badge.svg.png" alt="Download on the App Store" />
-            </a>
-            <a href="#" class="badge-store" aria-label="Get it on Google Play">
-              <img src="img/Google_Play_Store_badge_EN.svg.png" alt="Get it on Google Play" />
-            </a>
-          </div>
-        </div>
+      <img class="qr" src="img/QR1.png" alt="VilniusGO app download QR code" />
+
+      <div class="stores">
+        <a href="#" class="badge-store">
+          <img src="img/Download_on_the_App_Store_Badge.svg.png"
+               alt="Download VilniusGO on the App Store" />
+        </a>
+        <a href="#" class="badge-store">
+          <img src="img/Google_Play_Store_badge_EN.svg.png"
+               alt="Get VilniusGO on Google Play" />
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ======= WHITE BLOCK (phone with side photos in a row) ======= -->
+  <!-- PHONE SECTION -->
   <section class="phone-band">
     <div class="container">
+      <div class="phone-strip">
+        <img class="strip-img" src="img/lithuaniacountry.svg"
+             alt="Lithuania map illustration" loading="lazy">
 
-      <!-- Полоса: две слева → телефон → две справа -->
-      <div class="phone-strip" aria-label="Phone with side photos">
-        <!-- левее слева -->
-        <img class="strip-img strip-left-far" src="img/lithuaniacountry.svg" alt="Lietuva">
+        <img class="strip-img" src="img/pngwing.com.png"
+             alt="Outdoor walking illustration" loading="lazy">
 
-        <!-- слева (ближе к телефону) -->
-        <img class="strip-img strip-left-near" src="img/pngwing.com.png" alt="Lietuvos miestai">
+        <div class="phone-center">
+          <img src="img/iphone15promax_1290x2796-portrait.png"
+               alt="VilniusGO mobile app map view">
+        </div>
 
-        <!-- центр: телефон -->
-        <figure class="portrait phone-center" aria-label="Phone image">
-          <img src="img/iphone15promax_1290x2796-portrait.png" alt="Phone">
-        </figure>
+        <img class="strip-img" src="img/walk10000.png"
+             alt="Daily walking challenge illustration" loading="lazy">
 
-        <!-- справа (ближе к телефону) -->
-        <img class="strip-img strip-right-near" src="img/walk10000.png" alt="10 000 žingsnių">
-
-        <!-- ещё правее -->
-        <img class="strip-img strip-right-far" src="img/play.jpg" alt="Įrenginys">
+        <img class="strip-img" src="img/play.jpg"
+             alt="Community gameplay illustration" loading="lazy">
       </div>
 
-      <!-- Нижние карточки -->
-      <div class="content two">
-        <a href="about.html" class="card light card--click" aria-label="About Vilnius Go">
-  <h3>What is it?</h3>
-  <p>A mobile app for runners: run to “paint” blocks and earn points. The more you move, the higher your team’s rank.</p>
-  <span class="muted">Read the rules →</span>
-</a>
+      <div class="content">
+        <a href="about.html" class="card light card--click">
+          <h3>What is VilniusGO?</h3>
+          <p>Run to paint blocks, earn points and explore the city map.</p>
+        </a>
 
         <aside class="card light">
           <h3>Weekend challenge</h3>
-          <p>Join the City Sprint this weekend and get early access to new map layers.</p>
+          <p>Join the City Sprint and try new map layers.</p>
         </aside>
       </div>
     </div>
-  </section>
 
-  <!-- FRIENDS / BLUE CTA -->
-  <section id="friends" class="friends-band">
-    <div class="container">
-      <h2>Play Together</h2>
-      <p class="lead">
-        <strong>Vilnius Go</strong> you team up with friends, take zones, and meet new players around you. Join the strong and own your city.
-      </p>
+    <!-- FRIENDS -->
+    <section class="friends-band">
+      <div class="container">
+        <h2>Play Together</h2>
+        <p class="lead">Team up, take zones and grow your city power.</p>
 
-      <div class="friends-grid">
-        <figure class="friend-card">
-          <img src="img/friends1.jpg" alt="Simon running in the city">
-          <figcaption>Simon • 24 km • 3 zones</figcaption>
-        </figure>
+        <div class="friends-grid">
+          <figure class="friend-card">
+            <img src="img/friends1.jpg"
+                 alt="Players walking together in VilniusGO" loading="lazy">
+            <figcaption>Employers • 24 km</figcaption>
+          </figure>
 
-        <figure class="friend-card main">
-          <img src="img/friends2.png" alt="Natalie after a run">
-          <figcaption>Follow Natalie • 31 km • 5 zones</figcaption>
-        </figure>
+          <figure class="friend-card">
+            <img src="img/friends2.png"
+                 alt="Teammates planning strategy" loading="lazy">
+            <figcaption>Classmates • 32 km</figcaption>
+          </figure>
 
-        <figure class="friend-card">
-          <img src="img/friends3.jpeg" alt="Sabina on the track">
-          <figcaption>Sabina • 16 km • 2 zones</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- DARK ZONE -->
-  <main class="container">
-    <section class="section">
-      <div class="content two">
-        <article class="card">
-          <h3>Why Vilnius Go?</h3>
-          <p>Train outdoors, meet locals, and turn your routes into zones on the city map.</p>
-        </article>
-        <aside class="card">
-          <h3>Privacy</h3>
-          <p>GPS data is stored locally and uploaded only with your consent.</p>
-        </aside>
+          <figure class="friend-card">
+            <img src="img/friends3.jpeg"
+                 alt="Friends playing outdoor game" loading="lazy">
+            <figcaption>Friends • 16 km</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
-  </main>
 
-  <!-- ============ FOOTER ============ -->
+    <main class="container">
+      <div class="content">
+        <article class="card">
+          <h3>Why VilniusGO?</h3>
+          <p>Train outdoors and turn your route into zones.</p>
+        </article>
+
+        <aside class="card">
+          <h3>Privacy</h3>
+          <p>Your GPS stays local unless you allow upload.</p>
+        </aside>
+      </div>
+    </main>
+  </section>
+
+  <section class="extra-band">
+    <div class="container">
+      <h2>Coming soon…</h2>
+      <p>New features and events are on the way.</p>
+    </div>
+  </section>
+
   <footer>
-    <div class="container">© 2025 Vilnius Go. Healthy runners — stronger districts.</div>
+    <div class="container">© 2025 Vilnius Go.</div>
   </footer>
+
 </body>
 </html>

@@ -6,103 +6,111 @@
   <title>Vilnius Go — Register</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 <header>
   <div class="container nav">
     <div class="brand">
-      <a href="index.html"><img src="img/VG1.png" alt="Vilnius Go logo" class="logo" /></a>
-      <span>Vilnius Go</span>
+      <a href="index.html"><img src="img/VG1.png" alt="" class="logo" /></a>
+      <span id="main-title">Vilnius Go</span>
     </div>
-    <nav class="menu" aria-label="Main menu">
+    <!-- 1) Checkbox (paslėptas, naudojamas atidaryti/uždaryti meniu) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+    <!-- 2) Hamburger (buterbrodas) -->
+    <label for="nav-toggle" class="nav-burger" aria-label="Open menu">
+      <span></span>
+    </label>
+
+    <nav class="menu">
       <a href="index.html">Home</a>
       <a href="leaderboard.html">Leaderboard</a>
       <a href="about.html">About</a>
       <a class="active" href="register.html">Register</a>
       <a href="contact.html">Contact</a>
       <a href="settings.html">Settings</a>
-      <label class="switch" title="Toggle theme">
-        <input id="themeToggle" type="checkbox" aria-label="Light theme" />
-        <span>Light theme</span>
-      </label>
     </nav>
-    <a href="about.html" class="btn primary">About</a>
+
+    <a href="#" class="btn primary">Login</a>
   </div>
 </header>
 
 <main class="container">
-  <section class="section">
-    <h1 class="hero-title">Register — sign up</h1>
+  <h1 class="hero-title">Register — sign up</h1>
 
-    <div class="content single">
-      <form class="card form" aria-labelledby="register-title">
-        <h3 id="register-title">Create your account</h3>
+ 
+    <form id="registerForm" class="card form" action="#" method="post">
 
-        <div class="form-group grid-2">
-          <label class="field">
-            <span class="label">Full name</span>
-            <input type="text" name="name" placeholder="John Doe" autocomplete="name" required>
-          </label>
-          <label class="field">
-            <span class="label">Email</span>
-            <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-          </label>
-        </div>
 
-        <div class="form-group grid-2">
-          <label class="field">
-            <span class="label">Phone</span>
-            <input type="tel" name="tel" placeholder="+370 6xx xxxx" autocomplete="tel">
-          </label>
-          <label class="field">
-            <span class="label">Age</span>
-            <input type="number" name="age" min="7" max="90" placeholder="18">
-          </label>
-        </div>
 
-        <!-- Start date (left) + About you (right) -->
-        <div class="form-group grid-2">
-          <label class="field">
-            <span class="label">Start date</span>
-            <input type="date" name="start">
-          </label>
+      <h3>Create your account</h3>
 
-          <label class="field">
-            <span class="label">About you</span>
-            <!-- фиксированный размер + лимит символов (примерно под 100 слов) -->
-            <textarea
-              class="no-resize"
-              name="about"
-              rows="4"
-              maxlength="700"
-              placeholder="What's your running goal this season?"
-              aria-describedby="about-help"
-            ></textarea>
-            <small id="about-help" class="muted">Up to ~100 words (max 700 characters).</small>
-          </label>
-        </div>
+      <!-- 2 columns: Full name + Email -->
+      <div class="grid-2">
+        <label>
+          Full name<br>
+          <input type="text" name="name" placeholder="Aleksandr Michalovskij" required>
+        </label>
 
-        <div class="form-group">
-          <label class="field">
-            <span class="label">Profile photo</span>
-            <input type="file" name="avatar" accept="image/*">
-          </label>
-        </div>
+        <label>
+          Email<br>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+      </div>
 
-        <div class="form-group choice">
-          <label><input type="checkbox" name="terms" required> I agree to the Terms</label>
-        </div>
+      <!-- 2 columns: Phone + Age -->
+      <div class="grid-2">
+        <label>
+          Phone<br>
+          <input type="tel" name="tel" placeholder="+370 6xx xxxx">
+        </label>
 
-        <div class="cta">
-          <button class="btn primary" type="submit">Create account</button>
-          <button class="btn" type="reset">Clear</button>
-        </div>
-      </form>
-    </div>
-  </section>
+        <label>
+          Age<br>
+          <input type="number" name="age" placeholder="18" min="7" max="90">
+        </label>
+      </div>
+
+      <!-- 2 columns: Start date + About you -->
+      <div class="grid-2">
+        <label>
+          Start date<br>
+          <input type="date" name="start">
+        </label>
+
+        <label>
+          About you<br>
+          <textarea name="about" rows="5" placeholder="What's your running goal this season?"></textarea>
+        </label>
+      </div>
+
+      <!-- Profile photo -->
+       <div class="gridphoto">
+       <div class="grid-2">
+      <label>
+        Profile photo<br>
+        <input type="file" name="avatar" accept="image/*">
+      </label>
+</div></div>
+      <!-- Terms -->
+      <label>
+        <input type="checkbox" name="terms" required>
+        I agree to the Terms
+      </label>
+
+      <!-- Buttons -->
+      <button class="btn primary" type="submit">Create account</button>
+      <button class="btn" type="reset">Clear</button>
+
+    </form>
+  
 </main>
 
 <footer>
   <div class="container">© 2025 Vilnius Go.</div>
 </footer>
+<script src="js/app.js"></script>
+<script src="js/settings.js"></script>
+
 </body>
 </html>
